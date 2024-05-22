@@ -1,9 +1,16 @@
+/* why cant I change the selector from body
+to another class to remove gap between
+header and introduction? */
+
+body {
+    padding: 0 !important; 
+}
+
 .header {
     font-family: "Consolas", sans-serif;
     font-optical-sizing: auto;
     font-weight: lighter;
     background-color: #1C1678;
-    margin: 0;
     border-bottom: 1px solid #A3FFD6;
 }
 
@@ -20,7 +27,7 @@
 }
 
 .github-button {
-    border-radius: 15%;
+    border-radius: 40%;
     background-color: black;
     color: #A3FFD6;
     border: none;
@@ -36,6 +43,10 @@ a {
     color: inherit;
 }
 
+.navbar { 
+   color: #A3FFD6;
+}
+
 a:link {
     text-decoration: none;
 }
@@ -44,6 +55,10 @@ a:visited {
     text-decoration: none;
 }
 
+.font-deco {
+    font-weight: bold;
+    text-decoration: underline;
+}
 a:hover {
     text-decoration: none;
 }
@@ -53,9 +68,19 @@ a:active {
 }
 
 .body-background {
-    margin: 0;
-    height: 90.7vh;
+    margin-top: 0;
+    padding-top: 0;
+    height: 100vh;
     width: 100%;
+}
+
+.project-background {
+    margin-top: 0;
+    padding-top: 0;
+    height: 50vh;
+    width: 100%;
+    display: block;
+    justify-content: space-between;
 }
 
 .overlay-container {
@@ -85,6 +110,35 @@ ul {
     text-align: center;
     list-style-type: none;
 }
+
+.gradient-background {
+	background: linear-gradient(-90deg,#7BC9FF, #A3FFD6);
+	background-size: 400% 400%;
+	animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@media (max-width: 617px) {
+    .overlay-content {
+        padding-top: 200px;
+    }
+    .header {
+        margin-left: auto;
+    }
+  }
+
+/* below has been copied, how do i recreate?*/
 
 .scroll-down {
     position: absolute;
@@ -126,11 +180,3 @@ ul {
     100% { transform:translate(0,10px) rotate(45deg); opacity: 0; }
   }
 
-  @media (max-width: 617px) {
-    .overlay-content {
-        padding-top: 200px;
-    }
-    .header {
-        margin-left: auto;
-    }
-  }
