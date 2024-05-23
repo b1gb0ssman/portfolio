@@ -18,12 +18,8 @@ body {
     text-shadow: 2px 15px 10px #7BC9FF;
 }
 
-.header > .container {
-    margin: 0;
-}
-
 .mr-3 {
-    margin-right: 15px;
+    margin-right: 10px;
 }
 
 .github-button {
@@ -33,6 +29,7 @@ body {
     border: none;
     height: 39px;
     font-size: 1.1rem;
+    transition-delay: 0ms;
 }
 
 .card-cover {
@@ -129,14 +126,18 @@ ul {
 	}
 }
 
-@media (max-width: 617px) {
+@media (max-width: 990px) {
     .overlay-content {
         padding-top: 200px;
     }
     .header {
         margin-left: auto;
     }
+    .overlay-container > img {
+        height: 100vh;
+    }
   }
+
 
 /* below has been copied, how do i recreate?*/
 
@@ -152,10 +153,9 @@ ul {
     text-shadow: 0;
     width: 20px;
     height: 20px;
-    border-bottom: 2px solid #fff;
-    border-right: 2px solid #fff;
-    z-index: 9;
-    left: 50%;
+    border-bottom: 2px solid #A3FFD6;
+    border-right: 2px solid #A3FFD6;
+    color: #A3FFD6;
     -webkit-transform: translate(-50%, 0%) rotate(45deg);
     -moz-transform: translate(-50%, 0%) rotate(45deg);
     transform: translate(-50%, 0%) rotate(45deg);
